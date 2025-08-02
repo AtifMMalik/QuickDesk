@@ -6,6 +6,9 @@ import { useNavigate, Link } from "react-router-dom";
 import { URL__SIGNUP } from "../utils/URLs";
 import "./style.css"
 import { HiOutlineViewGridAdd } from "react-icons/hi";
+import LogoName from "./LogoName";
+
+
 const Signup = () => {
   const { login, loading } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -41,23 +44,26 @@ const Signup = () => {
 
   return (
     <div className="formScreen">
-      <div>
-        <HiOutlineViewGridAdd />
-        <h1>QuickDesk</h1>
-      </div>
 
+      <LogoName/>
+  
       <div className="form">
         {loading ? <p>Loading...</p> : (
           <form onSubmit={handleSubmit}>
+            <h2>Signup.</h2>
             <input type="text" name="username" placeholder="Username" required onChange={handleChange}/>
             <input type="text" name="name" placeholder="Full Name" required onChange={handleChange}/>
             <input type="email" name="email" placeholder="Email" required onChange={handleChange}/>
             <input type="password" name="password" placeholder="Password" required onChange={handleChange}/>
             <input type="password" name="password2" placeholder="Confirm Password" required onChange={handleChange}/>
             <h3>Register As.</h3>
-            <div className="radioIP">
+            {/* <div className="radioIP">
               <input type="radio" name="role" value={"admin"} id="si_roleAdmin" />
               <label htmlFor="si_roleAdmin">Admin</label>
+            </div> */}
+            <div className="radioIP">
+              <input type="radio" name="role" value={"admin"} id="si_roleSupportAgent" />
+              <label htmlFor="si_roleSupportAgent">Support Agent</label>
             </div>
             <div className="radioIP">
               <input type="radio" name="role" value={"customer"} id="si_roleCustomer"/>

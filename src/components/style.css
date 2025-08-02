@@ -1,7 +1,18 @@
 @import "../theme.css";
 
+/* ///////////////LOGO NAME/////////////// */
+.logoName{
+    display: flex;
+    align-items: center;
+}
+.logoName > svg{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    color: var(--secondary);
+}
 
-/* ///////////////LOGIN SCREEN/////////////// */
+/* ///////////////FORM SCREENS/////////////// */
 .formScreen{
     display: flex;
     align-items: center;
@@ -19,18 +30,10 @@
     justify-content: center;
     padding: 60px 0;
 }
-
-.formScreen > div:first-child > svg{
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    color: var(--secondary);
+.formScreen > div:first-child > *{
+    /* border: 1px solid; */
+    /* transform: scale(1.1); */
 }
-
-.formScreen h1{
-    font-size: 50px;
-}
-
 .formScreen > .form {
     flex-direction: column;
     border-left: 2px solid var(--dark_tones_1);
@@ -74,4 +77,133 @@
     outline: none;
     border: none;
     border-radius: 5px;
+}
+
+
+
+
+/* //////////////////////////////DASHBOARD////////////////////////////// */
+
+/* //////////HEADER//////////// */
+
+header select{
+    display: inline-block;
+    /* border: 1px solid var(--dark_tones_1); */
+    /* padding: 6px 10px; */
+    background-color: var(--background_dark);
+    color: var(--text_light);
+    outline: none;
+    border-radius: 5px;
+}
+/* searchbar */
+.searchBarContainer{
+    /* padding: 10px; */
+    border: 2px solid var(--dark_tones_1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+.searchBarContainer > svg{
+    color: var(--text_gray);
+    /* border: 1px solid; */
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.searchBarContainer input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--background_dark);
+    padding: 10px;
+}
+/* create ticket button */
+.createTicketBtn{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: var(--text_light);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+/* Top Bar */
+.headerBars{
+    border-bottom: 1px solid var(--dark_tones_1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:15px;
+    height: 50px;
+}
+
+.topBar #userRole{
+    border: 1px solid var(--dark_tones_1);
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 5px;
+
+}
+
+/* /////////////////////////////////TICKET CARD/////////////////////////////////// */
+.ticketCard{
+    border: 1px solid var(--dark_tones_1);
+    padding: 10px; 
+    display: flex;   
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    color: var(--text_light);
+    text-decoration: none;
+}
+.ticketCard > div{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid; */
+    width: 100%;
+    gap: 5px;
+}
+.ticketCard > div:nth-child(2){
+    align-items: end;
+}
+
+.ticketCard h2{
+    text-transform: capitalize;
+    /* font-weight: bold; */
+    /* color: var(--primary); */
+}
+
+.ticketCard .tags span{
+    font-size: 0.75rem;
+    border: 1px solid var(--dark_tones_1);
+    padding: 3px 11px;
+    border-radius: 50px;
+    color: var(--text_gray);
+}
+.ticketCard span{
+    font-weight: bold;
+}
+.status{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.status > span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    background-color: tomato;
+}
+.assignedTo{
+    font-size: 0.9rem;
+}
+.time{
+    font-size: 0.8rem;
 }
