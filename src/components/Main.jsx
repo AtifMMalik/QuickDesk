@@ -4,7 +4,7 @@ import Login from "./Login";
 import Signup from "./Signup";
 import ProtectedRoutes from "../utils/ProtectedRoutes";
 import Page404 from "./Page404";
-import Home from "./Home";
+import Dashboard from "./Dashboard";
 
 const Main = () => {
   return (
@@ -15,8 +15,8 @@ const Main = () => {
         
             {/* PROTECTED ROUTES */}
             <Route element={<ProtectedRoutes/>}>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/home" element={<Home/>}/>
+                <Route path="/" element={<Dashboard/>}/>
+                <Route path="/dashboard" element={<Dashboard/>}/>
                 <Route path="/profile" element={<Profile/>}/>
             </Route>
         
