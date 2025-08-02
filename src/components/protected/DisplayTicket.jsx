@@ -14,25 +14,25 @@ const DisplayTicket = () => {
     const authContext = useContext(AuthContext);
 
     useEffect(() => {
-        // axios.post(URL__TICKET_DETAILS,null, {
-        //         headers: {
-        //             Authorization: `Bearer ${authContext?.token}`,
-        //         },
-        // }).then((response)=>{
-        //     setTicketData(response.data);
-        // })
-
-        setTicketData({
-            id: 1,
-            title: "Unable to login to dashboard",
-            description: "I keep getting a 401 error when trying to login.",
-            category: "Technical",
-            status: "open",
-            assignedTo: "Aarav",
-            reply: "Hi, thanks for reporting this. A 401 error usually indicates an authentication issue. Please make sure you're using the correct credentials and that your account is verified. Let me know if the issue persists after trying that.",
-            createdAt: "2025-07-28",
-            updatedAt: "2025-07-29"
+        axios.post(URL__TICKET_DETAILS,null, {
+                headers: {
+                    Authorization: `Bearer ${authContext?.token}`,
+                },
+        }).then((response)=>{
+            setTicketData(response.data);
         })
+
+        // setTicketData({
+        //     id: 1,
+        //     title: "Unable to login to dashboard",
+        //     description: "I keep getting a 401 error when trying to login.",
+        //     category: "Technical",
+        //     status: "open",
+        //     assignedTo: "Aarav",
+        //     reply: "Hi, thanks for reporting this. A 401 error usually indicates an authentication issue. Please make sure you're using the correct credentials and that your account is verified. Let me know if the issue persists after trying that.",
+        //     createdAt: "2025-07-28",
+        //     updatedAt: "2025-07-29"
+        // })
     }, [])
     
 
