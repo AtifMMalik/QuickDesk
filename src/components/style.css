@@ -4,6 +4,8 @@
 .logoName{
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: var(--text_light);
 }
 .logoName > svg{
     width: 35px;
@@ -141,8 +143,14 @@ header select{
     justify-content: space-between;
     padding:15px;
     height: 50px;
+    overflow: hidden;
 }
-
+.headerBars div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 .topBar #userRole{
     border: 1px solid var(--dark_tones_1);
     display: inline-block;
@@ -150,7 +158,22 @@ header select{
     border-radius: 5px;
 
 }
-
+.topBar  .userProfile{
+    height: 100%;
+    /* width: ; */
+    font-weight: bold;
+}
+.topBar  .userProfile img{
+    /* border: 1px solid red; */
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.topBar  .bell{
+    width: 25px;
+    height: 25px;
+}
 /* /////////////////////////////////TICKET CARD/////////////////////////////////// */
 .ticketCard{
     border: 1px solid var(--dark_tones_1);

@@ -12,7 +12,11 @@ const Header = () => {
                 <LogoName/>
 
                 <div className="">
-                    {/* <GoBell/> */}
+                    <GoBell className="bell"/>
+                    <div className="userProfile">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuqLyXlPLT3t_ltOzksHgCS9-RCXqc-ENGdA&s" alt="" />
+                        <span>Atif Mahmood Malik</span>
+                    </div>
                     <span id="userRole">Customer</span>
                 </div>
             </div>

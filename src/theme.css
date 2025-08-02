@@ -36,3 +36,7 @@
 
 
 /* common elements */
+input{
+    background-color: var(--background_dark);
+    color: var(--text_light);
+}

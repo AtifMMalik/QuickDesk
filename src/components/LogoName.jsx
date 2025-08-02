@@ -1,11 +1,12 @@
 import { HiOutlineViewGridAdd } from "react-icons/hi"
 import "./style.css"
+import { Link } from "react-router-dom"
 const LogoName = () => {
   return (
-        <div className="logoName">
+        <Link to={"/dashboard"} className="logoName">
             <HiOutlineViewGridAdd />
             <h1>QuickDesk</h1>
-        </div>
+        </Link>
   )
 }
 

@@ -17,3 +17,46 @@ main{
     gap: 10px;
     padding: 10px 15px;
 }
+
+/* //////////////Create ticket//////////////// */
+.createTicketContainer{
+    display: grid;
+    place-items: center;
+    height: calc(100vh - 100px);
+    width: 100%; 
+    overflow: auto;  
+}
+.createTicketContainer form{
+    border: 1px solid var(--text_gray);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
+.createTicketContainer form input,
+.createTicketContainer form textarea{
+    background-color: var(--background_dark);
+    padding: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--text_light);
+    border: 1px solid var(--dark_tones_1);
+    outline: none;
+}
+.createTicketContainer form textarea{
+    height: calc(100vh - 450px);
+    outline: none;
+}
+.createTicketContainer form button{
+    background-color: var(--secondary);
+    padding: 10px;
+    width: 100%;
+    border-radius:10px ;
+    border: none;
+    outline: none;
+}
