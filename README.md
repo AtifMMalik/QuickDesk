@@ -1,5 +1,5 @@
-<h3>1. Backend Technologies Used
-   The backend of QuickDesk is built using robust and scalable technologies that ensure security, maintainability, and performance.</h3>
+<h3>1. Backend Technologies Used</h3>
+<h4>The backend of QuickDesk is built using robust and scalable technologies that ensure security, maintainability, and performance.</h4> 
 
  Tech Stack
 Python 3.x
@@ -71,4 +71,5 @@ Prevents multiple votes from the same user on the same ticket.
  Authorization & Token Validation
 /auth-check/ route is protected using IsAuthenticated.
 Used to verify if the JWT token is valid for frontend protected routes.
+
 
