@@ -4,7 +4,8 @@ import { useContext } from "react";
 import AuthContext from "../contexts/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import { URL__SIGNUP } from "../utils/URLs";
-
+import "./style.css"
+import { HiOutlineViewGridAdd } from "react-icons/hi";
 const Signup = () => {
   const { login, loading } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -39,51 +40,38 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <h2>Signup</h2>
-      {loading ? <p>Loading...</p> : (
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="username"
-            placeholder="Username"
-            required
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            required
-            onChange={handleChange}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-            onChange={handleChange}
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            required
-            onChange={handleChange}
-          />
-          <input
-            type="password"
-            name="password2"
-            placeholder="Confirm Password"
-            required
-            onChange={handleChange}
-          />
-          <button type="submit">Signup</button>
-        </form>
-      )}
-      <p>
-        Already have an account? <Link to="/login">Login</Link>
-      </p>
+    <div className="formScreen">
+      <div>
+        <HiOutlineViewGridAdd />
+        <h1>QuickDesk</h1>
+      </div>
+
+      <div className="form">
+        {loading ? <p>Loading...</p> : (
+          <form onSubmit={handleSubmit}>
+            <input type="text" name="username" placeholder="Username" required onChange={handleChange}/>
+            <input type="text" name="name" placeholder="Full Name" required onChange={handleChange}/>
+            <input type="email" name="email" placeholder="Email" required onChange={handleChange}/>
+            <input type="password" name="password" placeholder="Password" required onChange={handleChange}/>
+            <input type="password" name="password2" placeholder="Confirm Password" required onChange={handleChange}/>
+            <h3>Register As.</h3>
+            <div className="radioIP">
+              <input type="radio" name="role" value={"admin"} id="si_roleAdmin" />
+              <label htmlFor="si_roleAdmin">Admin</label>
+            </div>
+            <div className="radioIP">
+              <input type="radio" name="role" value={"customer"} id="si_roleCustomer"/>
+              <label htmlFor="si_roleCustomer">Customer</label>
+            </div>
+
+
+            <button type="submit" className="button_default">Signup</button>
+          </form>
+        )}
+        <p>
+          Already have an account? <Link to="/login">Login</Link>
+        </p>
+      </div>
     </div>
   );
 };

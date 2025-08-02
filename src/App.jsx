@@ -1,21 +1,22 @@
 import {  NavLink } from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "./contexts/AuthContext";
-import Main from "./components/Main";
+import Main from "./components/protected/Main";
 import Loader from "./components/Loader";
+import "./App.css";
 
 const App = () => {
   const authContext = useContext(AuthContext);
   return (
     <>
-      <header>
+      {/* <header>
         <nav>
           <NavLink to="/profile">profile</NavLink>|
           <NavLink to="/login">login</NavLink>|
           <NavLink to="/signup">signup</NavLink>|
-          <NavLink to="/Home">home</NavLink>|
+          <NavLink to="/Dashboard">Dashboard</NavLink>|
         </nav>
-      </header>
+      </header> */}
 
       {authContext?.loading?
         <Loader/>

@@ -6,5 +6,5 @@
             host: true, // allows access from network
         },
         plugins: [react()],
-        base: '/QuickDesk/',
+        // base: '/QuickDesk/',
     })

@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import Profile from "./protected/Profile";
-import Login from "./Login";
-import Signup from "./Signup";
-import ProtectedRoutes from "../utils/ProtectedRoutes";
-import Page404 from "./Page404";
+import Profile from "./Profile";
+import Login from "../Login";
+import Signup from "../Signup";
+import ProtectedRoutes from "../../utils/ProtectedRoutes";
+import Page404 from "../Page404";
 import Dashboard from "./Dashboard";
 
 const Main = () => {

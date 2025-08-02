@@ -1,0 +1,77 @@
+@import "../theme.css";
+
+
+/* ///////////////LOGIN SCREEN/////////////// */
+.formScreen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background_dark);
+    color: var(--text_light);
+}
+
+.formScreen > *{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.formScreen > div:first-child > svg{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    color: var(--secondary);
+}
+
+.formScreen h1{
+    font-size: 50px;
+}
+
+.formScreen > .form {
+    flex-direction: column;
+    border-left: 2px solid var(--dark_tones_1);
+    
+    
+}
+
+.formScreen > .form form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.formScreen > .form form input{
+    padding: 10px;
+    background-color: var(--background_dark);
+    outline: none;
+    border: 2px solid var(--dark_tones_1);
+    border-radius: 5px;
+
+}
+.formScreen > .form form .radioIP{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.formScreen > .form form .radioIP input{
+    border: 1px solid red;
+    width: 10px;
+    height: 10px;
+}
+.formScreen > .form form .button_default{
+    margin-top: 10px;
+}
+.button_default{
+    padding: 10px;
+    background-color: var(--secondary);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
