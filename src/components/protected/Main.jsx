@@ -7,6 +7,7 @@ import Page404 from "../Page404";
 import Dashboard from "./Dashboard";
 import "./style.css"
 import CreateTicket from "./CreateTicket";
+import DisplayTicket from "./DisplayTicket";
 
 const Main = () => {
   return (
@@ -21,6 +22,7 @@ const Main = () => {
                 <Route path="/dashboard" element={<Dashboard/>}/>
                 <Route path="/profile" element={<Profile/>}/>
                 <Route path="/createTicket" element={<CreateTicket/>}/>
+                <Route path="/DisplayTicket" element={<DisplayTicket/>}/>
             </Route>
         
             {/* 404 page */}

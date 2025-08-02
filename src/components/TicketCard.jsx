@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import "./style.css"
 
 const TicketCard = ({title, description, category, status, assignedTo, createdAt, updatedAt}) => {
     return (
-        <a href="#" className="ticketCard">
+        <Link to={"/DisplayTicket"} className="ticketCard">
             <div>
                 <h2>{title}</h2>
                 
@@ -44,7 +45,7 @@ const TicketCard = ({title, description, category, status, assignedTo, createdAt
                 <div className="createdAt time"><span>Created at : </span>{createdAt}</div>
                 <div className="updatedAt time"><span>Updated at : </span>{updatedAt}</div>
             </div>
-        </a>
+        </Link>
     )
 }
 

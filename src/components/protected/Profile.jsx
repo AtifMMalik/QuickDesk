@@ -4,7 +4,7 @@ import AuthContext from "../../contexts/AuthContext";
 const Profile = () => {
   
   const authContext = useContext(AuthContext);
-  console.log(authContext);
+  // console.log(authContext);
 
   return (
     <div>

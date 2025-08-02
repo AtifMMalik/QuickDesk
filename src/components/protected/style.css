@@ -60,3 +60,65 @@ main{
     border: none;
     outline: none;
 }
+
+/* ///////////////Display ticket/////////////// */
+
+.ticketDisplayContainer{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: calc(100% - 100px);
+    justify-content: space-between;
+}
+.messages{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.messages > *{
+    padding: 10px;
+}
+
+.messages > .sent{
+    margin-left: 20px;
+    background-color: var(--accent);
+    border-radius: 15px 15px 0px 15px;
+}
+.messages > .reply{
+    margin-right: 10px;
+    background-color: var(--hue);
+    border-radius: 15px 15px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ticketDisplayContainer span{
+    font-weight: bold;
+}
+
+.bottomBar .chat{
+    display: flex;
+    align-items: center;
+
+}
+.bottomBar .chat svg{
+    width: 40px;
+    height: 40px;
+    color: var(--secondary);
+    padding: 5px;
+}
+.bottomBar .chat input{
+    width: calc(100% - 50px);
+    padding: 10px;
+    border: 1px solid var(--dark_tones_1);
+}
+
+.bottomBar > div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
